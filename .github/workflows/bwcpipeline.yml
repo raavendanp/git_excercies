@@ -1,0 +1,19 @@
+name: Run Script on PR
+
+on:
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run x2_build_all.sh on PR
+      run: |
+        chmod +x x2_build_all.sh  # Asegúrate de que el script tenga permisos de ejecución
+        ./x2_build_all.sh
