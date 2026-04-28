@@ -9,7 +9,23 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Run MiAction
       uses: ./.github/actions/miaction
+  
+  use-secrets:
+    env:
+      user: ${{ secrets.DEPLOYMENT_USER }}
+      password: ${{ secrets.DEPLOYMENT_PASSWORD }}
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Use secrets in script
+      run: |
+        echo "Using secrets in the script"
+        echo "USER: ${{ env.user }}"
+        echo "PASSWORD: ${{ env.password }}"
