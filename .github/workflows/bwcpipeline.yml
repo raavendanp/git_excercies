@@ -12,7 +12,9 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Run MiAction
-      uses: ./.github/actions/miaction
+      uses: ./.github/actions/files
+      with:
+        file: 'file1.txt workflows/bwcpipeline.yml' 
   
   use-secrets:
     environment: prod
