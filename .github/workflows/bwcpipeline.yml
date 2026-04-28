@@ -14,7 +14,7 @@ jobs:
     - name: Run MiAction
       uses: ./.github/actions/files
       with:
-        file: 'file1.txt github/workflows/bwcpipeline.yml' 
+        file: 'file1.txt .github/workflows/bwcpipeline.yml' 
   
   use-secrets:
     environment: prod
