@@ -1,9 +1,7 @@
 name: Run Script on PR
 
 on:
-  pull_request:
-    branches:
-      - '*'
+  workflow_dispatch:
 
 jobs:
   run-script:
