@@ -32,3 +32,10 @@ jobs:
         echo "Using secrets in the script"
         echo "USER: ${{ env.user }}"
         echo "PASSWORD: ${{ env.password }}"
+    - name: Create summary table
+      run: |
+        echo "| Step | Status | Duration |" >> $GITHUB_STEP_SUMMARY
+        echo "|------|--------|----------|" >> $GITHUB_STEP_SUMMARY
+        echo "| Checkout | Success | 5s |" >> $GITHUB_STEP_SUMMARY
+        echo "| Build    | Success | 45s |" >> $GITHUB_STEP_SUMMARY
+        echo "| Tests    | Failed  | 12s |" >> $GITHUB_STEP_SUMMARY
