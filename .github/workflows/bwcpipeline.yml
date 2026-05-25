@@ -16,14 +16,14 @@ jobs:
     
     - name: Summary Part 1
       run: |
-        echo "## Build Results" >> $GITHUB_STEP_SUMMARY
-        echo "| Step | Status |" >> $GITHUB_STEP_SUMMARY
-        echo "|------|--------|" >> $GITHUB_STEP_SUMMARY
-        echo "| Checkout | Success |" >> $GITHUB_STEP_SUMMARY
+        echo "## Plugins Results" >> $GITHUB_STEP_SUMMARY
+        echo "| Name | Last Version | Last Version PR | New Version Deployed| New Version |" >> $GITHUB_STEP_SUMMARY
+        echo "|------|--------|--------|------------------|-------------|" >> $GITHUB_STEP_SUMMARY
+        echo "| Plugin A | 1.0.0 | 1.0.1 | 1.0.2 | 1.0.3 |" >> $GITHUB_STEP_SUMMARY
 
     - name: Summary Part 2
       run: |
-        echo "## Test Results" >> $GITHUB_STEP_SUMMARY
-        echo "| Test Suite | Status |" >> $GITHUB_STEP_SUMMARY
-        echo "|------------|--------|" >> $GITHUB_STEP_SUMMARY
-        echo "| Unit Tests | Failed |" >> $GITHUB_STEP_SUMMARY
+        echo "## Services Results" >> $GITHUB_STEP_SUMMARY
+        echo "| Name | Last Version | Last Version PR | New Version Deployed| New Version |" >> $GITHUB_STEP_SUMMARY
+        echo "|------|--------|--------|------------------|-------------|" >> $GITHUB_STEP_SUMMARY
+        echo "| Service A | 1.0.0 | 1.0.1 | 1.0.2 | 1.0.3 |" >> $GITHUB_STEP_SUMMARY
