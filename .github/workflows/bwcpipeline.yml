@@ -13,3 +13,17 @@ jobs:
 
     - name: Run MiAction
       uses: ./.github/actions/miaction
+    
+    - name: Summary Part 1
+      run: |
+        echo "## Build Results" >> $GITHUB_STEP_SUMMARY
+        echo "| Step | Status |" >> $GITHUB_STEP_SUMMARY
+        echo "|------|--------|" >> $GITHUB_STEP_SUMMARY
+        echo "| Checkout | Success |" >> $GITHUB_STEP_SUMMARY
+
+    - name: Summary Part 2
+      run: |
+        echo "## Test Results" >> $GITHUB_STEP_SUMMARY
+        echo "| Test Suite | Status |" >> $GITHUB_STEP_SUMMARY
+        echo "|------------|--------|" >> $GITHUB_STEP_SUMMARY
+        echo "| Unit Tests | Failed |" >> $GITHUB_STEP_SUMMARY
